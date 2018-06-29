@@ -145,13 +145,13 @@ class TaskMonitor(ModelMonitor):
         }),
     )
     list_display = (
-        fixedwidth('task_id', name=_('UUID'), pt=8),
-        colored_state,
-        name,
-        fixedwidth('args', pretty=True),
-        fixedwidth('kwargs', pretty=True),
-        eta,
-        tstamp,
+        'task_id',
+        'state',
+        'name',
+        'args',
+        'kwargs',
+        'eta',
+        'tstamp',
         'worker',
     )
     readonly_fields = (
